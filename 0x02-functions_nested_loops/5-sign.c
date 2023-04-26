@@ -5,9 +5,9 @@
  *		0 if n is zero and - if n is less
  *		than zero.
  *
- * @n: takes integer type input for function.
+ * @n: The number to be checked
  *
- * Return: 1 if +, 0 if 0 and -1 if -
+ * Return: 1 for positive num, -1 for negative num or zero for anything else
 */
 
 int print_sign(int n)
@@ -17,14 +17,14 @@ int print_sign(int n)
 		-putchar(43);
 		return (1);
 	}
-	else if (n == 0)
-	{
-		_putchar(48);
-		return (0);
-	}
-	else
+	else if (n < 0)
 	{
 		_putchar(45);
 		return (-1);
+	}
+	else
+	{
+		_putchar(48);
+		return (0);
 	}
 }
